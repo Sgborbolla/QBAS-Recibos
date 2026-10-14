@@ -43,17 +43,45 @@ Que se puede sumar al precio:
 
 DONDE VENDERLO INTERNACIONALMENTE
 ---------------------------------
-- Gumroad, Lemon Squeezy, Payhip (faciles, aceptan tarjeta).
-- Tu propia pagina web (ej: con un boton de pago PayPal/Stripe).
-- Ko-fi / Buy Me a Coffee (para versiones simples).
-- Facebook / Instagram / TikTok / Reddit (grupos de negocios y
-  emprendedores) enlazando a la pagina de compra.
-- Marketplaces de software (si aceptan autores independientes).
+IMPORTANTE: PayPal, Stripe, Wise, Skrill y la mayoria de las
+pasarelas NO funcionan para cobrar desde Cuba. Por eso hay que
+usar vias que SI funcionan.
 
-COBRO INTERNACIONAL
--------------------
-- PayPal, Stripe, Wise, Zelle, Skrill.
-- Entrega automatica del .exe/.apk tras el pago (con enlace).
+OPCION A - CRIPTOMONEDAS (la mas usada y practica desde Cuba)
+- USDT (TRC20 / BEP20), Bitcoin, Bitcoin Lightning.
+- Binance Pay / Binance P2P, o billeteras como Trust Wallet.
+- Se cobra en USD en cripto y se cambia localmente.
+- Ventaja: rapido, sin bloqueo de pais, comisiones bajas.
+
+OPCION B - INTERMEDIARIO EN EL EXTRANJERO (muy comun)
+- Un familiar, amigo o representante fuera de Cuba cobra por ti
+  con SU PayPal / Stripe / Zelle / cuenta bancaria.
+- Esa persona te envia el dinero en cripto, o te lo entrega aqui.
+- Muchos vendedores cubanos venden asi: el cliente paga afuera y
+  el dinero te llega por el intermediario.
+
+OPCION C - TIENDA CON PAGO EN CRIPTO
+- Monta tu pagina con botones de pago en cripto (ej: NOWPayments,
+  Coinos) o vende por Telegram con pago en USDT.
+- Gumroad / Lemon Squeezy / Payhip sirven para MOSTRAR el producto,
+  pero revisa si permiten PAGARTE en Cuba (muchas lo bloquean);
+  si no, usa la Opcion B para cobrar.
+
+OPCION D - OTROS
+- Airtm (verifica que funcione en tu caso).
+- Tarjetas de regalo (Amazon, etc.) o pago en efectivo acordado.
+
+DIFUSION (GRATIS)
+- Facebook, Instagram, TikTok, Telegram y Reddit (grupos de
+  negocios y emprendedores) enlazando a tu forma de pago.
+- YouTube/TikTok mostrando la app funcionando offline.
+
+COBRO Y ENTREGA
+---------------
+- Confirma el pago (cripto o intermediario) y luego entrega el
+  .exe / .apk. Puedes enviar el enlace de descarga por Telegram
+  o correo.
+- Lleva un registro de clientes y claves de licencia.
 
 
 ------------------------------------------------------------------------
