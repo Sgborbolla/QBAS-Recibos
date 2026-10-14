@@ -43,9 +43,18 @@ Que se puede sumar al precio:
 
 DONDE VENDERLO INTERNACIONALMENTE
 ---------------------------------
+LO PRINCIPAL: TU PROPIO MARKETPLACE
+Tu marketplace ya acepta estos medios de pago, asi que puedes
+cobrar directo desde ahi (sin PayPal/Stripe):
+  * Criptomoneda (USDT, Bitcoin, etc.)
+  * QvaPay
+  * TropiPay
+Esto cubre tanto a clientes de Cuba como del extranjero. El
+cliente paga en tu marketplace y descarga el .exe / .apk.
+
 IMPORTANTE: PayPal, Stripe, Wise, Skrill y la mayoria de las
-pasarelas NO funcionan para cobrar desde Cuba. Por eso hay que
-usar vias que SI funcionan.
+pasarelas NO funcionan para cobrar desde Cuba. Por eso conviene
+usar tu marketplace (cripto, QvaPay, TropiPay) o las vias de abajo.
 
 OPCION A - CRIPTOMONEDAS (la mas usada y practica desde Cuba)
 - USDT (TRC20 / BEP20), Bitcoin, Bitcoin Lightning.
