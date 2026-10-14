@@ -18,18 +18,21 @@ Un solo pago, sin mensualidad y sin necesidad de internet.
  PRECIO UNICO (el mismo programa para todos)
 ------------------------------------------------------------------------
 No hay varias ediciones: es el MISMO programa completo.
-Un solo precio, pago unico.
+Un solo precio, pago unico (sin mensualidad).
 
-   INTERNACIONAL ............ 12 USD   (o 11 EUR)
-   CUBA ..................... 1.200 CUP
+                     PRECIO DE LANZAMIENTO      PRECIO FINAL
+  INTERNACIONAL ......... 12 USD (11 EUR) .....   20 USD (18 EUR)
+  CUBA .................. 500 CUP ..............   1.000 CUP
+
+PROMOCION DE LANZAMIENTO:
+Los primeros clientes pagan el PRECIO DE LANZAMIENTO
+(12 USD / 500 CUP) para conseguir resenas y recomendaciones.
+Despues el precio final queda en 20 USD / 1.000 CUP.
+(Anuncia la promo como "precio de lanzamiento por tiempo limitado".)
 
 - Incluye TODAS las funciones (version PRO).
 - Incluye instalador (.exe / .apk) para 1 dispositivo.
 - Pago unico, sin mensualidad.
-
-PROMOCION DE LANZAMIENTO (opcional, para las primeras ventas):
-   INTERNACIONAL 7 USD   /   CUBA 700 CUP
-(para conseguir resenas y los primeros clientes)
 
 
 ------------------------------------------------------------------------
