@@ -28,6 +28,14 @@ INCLUYE (TODO)
 - 3 plantillas (Clasica, Moderna, Compacta) y color a tu gusto.
 - Tu propio logo en el recibo.
 - Historial de recibos guardados.
+- BASE DE DATOS AUTOMATICA: cada factura que generas se guarda
+  sola (fecha, hora, cliente y todos los datos).
+- EXCEL AUTOMATICO que se actualiza solo, con 3 hojas: Recibos,
+  Clientes y Emisor. No hay que exportar nada a mano.
+- PDF AUTOMATICO de cada recibo.
+- CARPETA "QBAS-Recibos" en Descargas donde se guarda TODO
+  automaticamente (Excel, PDF, copia de seguridad), lista para
+  abrir cuando quieras.
 - Exportar e Importar (HTML/JSON).
 - Imprimir o Guardar en PDF con un clic.
 

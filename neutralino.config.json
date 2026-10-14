@@ -6,7 +6,11 @@
   "documentRoot": "/src/",
   "url": "/",
   "enableServer": true,
-  "enableNativeAPI": false,
+  "enableNativeAPI": true,
+  "nativeAllowList": [
+    "filesystem.*",
+    "os.*"
+  ],
   "tokenSecurity": "one-time",
   "logging": {
     "enabled": false,

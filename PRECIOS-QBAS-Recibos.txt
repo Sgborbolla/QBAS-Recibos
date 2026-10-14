@@ -13,6 +13,16 @@ temas, historial e importar/exportar HTML. Se entrega como
 instalador real (.exe para Windows y .apk para Android).
 Un solo pago, sin mensualidad y sin necesidad de internet.
 
+NOVEDAD (incluida sin costo):
++ Base de datos automatica: al generar cada factura se guarda
+  sola (fecha, hora, cliente y todos los datos).
++ Excel automatico: se actualiza solo, con hojas Recibos,
+  Clientes y Emisor. Sin exportar a mano.
++ PDF automatico de cada recibo.
++ Carpeta "QBAS-Recibos" en Descargas: guarda todo (Excel, PDF,
+  copia de seguridad JSON) automaticamente. Se crea al abrir
+  por primera vez.
+
 
 ------------------------------------------------------------------------
  PRODUCTOS Y PRECIOS (se venden POR SEPARADO)
