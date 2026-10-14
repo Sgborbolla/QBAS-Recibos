@@ -15,23 +15,33 @@ Un solo pago, sin mensualidad y sin necesidad de internet.
 
 
 ------------------------------------------------------------------------
- PRECIO UNICO (el mismo programa para todos)
+ PRODUCTOS Y PRECIOS (se venden POR SEPARADO)
 ------------------------------------------------------------------------
-No hay varias ediciones: es el MISMO programa completo.
-Un solo precio, pago unico (sin mensualidad).
+Es el MISMO programa completo (version PRO) en las funciones.
+Lo que cambia es la plataforma. Cada paquete se vende aparte.
 
-                     PRECIO DE LANZAMIENTO      PRECIO FINAL
+1) PAQUETE PC (Windows / Linux / Mac)
+                    PRECIO DE LANZAMIENTO      PRECIO FINAL
   INTERNACIONAL ......... 12 USD (11 EUR) .....   20 USD (18 EUR)
   CUBA .................. 500 CUP ..............   1.000 CUP
 
+2) PAQUETE ANDROID (.apk)
+                    PRECIO DE LANZAMIENTO      PRECIO FINAL
+  INTERNACIONAL .........  9 USD (8 EUR) ......   15 USD (14 EUR)
+  CUBA .................. 400 CUP ..............     800 CUP
+
+3) COMBO (PC + ANDROID) - opcional, con descuento
+                    PRECIO DE LANZAMIENTO      PRECIO FINAL
+  INTERNACIONAL ......... 18 USD (16 EUR) .....   30 USD (27 EUR)
+  CUBA .................. 800 CUP ..............   1.500 CUP
+
 PROMOCION DE LANZAMIENTO:
-Los primeros clientes pagan el PRECIO DE LANZAMIENTO
-(12 USD / 500 CUP) para conseguir resenas y recomendaciones.
-Despues el precio final queda en 20 USD / 1.000 CUP.
+Los primeros clientes pagan el PRECIO DE LANZAMIENTO para
+conseguir resenas y recomendaciones. Despues sube al PRECIO FINAL.
 (Anuncia la promo como "precio de lanzamiento por tiempo limitado".)
 
-- Incluye TODAS las funciones (version PRO).
-- Incluye instalador (.exe / .apk) para 1 dispositivo.
+- Cada paquete incluye TODAS las funciones (version PRO).
+- Cada paquete es para 1 dispositivo.
 - Pago unico, sin mensualidad.
 
 
