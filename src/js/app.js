@@ -235,14 +235,15 @@ function updateReceipt() {
   // filas impresas
   const tbody = $("r-items");
   tbody.innerHTML = "";
+  const dl = (s) => String(s == null ? "" : s).replace(/"/g, "&quot;");
   items.forEach((it) => {
     if (!it.desc && !it.price) return;
     const tr = document.createElement("tr");
     tr.innerHTML =
-      `<td class="c-qty">${fmtNum(it.qty || 0)}</td>` +
-      `<td class="c-desc">${escapeHtml(it.desc)}</td>` +
-      `<td class="c-price">${money(it.price || 0)}</td>` +
-      `<td class="c-amount">${money((it.qty || 0) * (it.price || 0))}</td>`;
+      `<td class="c-qty" data-label="${dl(t("qty"))}">${fmtNum(it.qty || 0)}</td>` +
+      `<td class="c-desc" data-label="${dl(t("description"))}">${escapeHtml(it.desc)}</td>` +
+      `<td class="c-price" data-label="${dl(t("unit_price"))}">${money(it.price || 0)}</td>` +
+      `<td class="c-amount" data-label="${dl(t("amount"))}">${money((it.qty || 0) * (it.price || 0))}</td>`;
     tbody.appendChild(tr);
   });
 
