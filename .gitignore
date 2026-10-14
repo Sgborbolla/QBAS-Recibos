@@ -21,3 +21,7 @@ neutralino.js
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Empaquetado
+build_tmp/
+releases/
