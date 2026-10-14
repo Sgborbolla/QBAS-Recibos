@@ -596,8 +596,10 @@ function formatDateTime(iso) {
 function buildReceiptRecord() {
   const { subtotal, discount, tax, total } = computeTotals();
   const sel = $("currency-select").value;
+  const iso = new Date().toISOString();
   return {
-    datetime: new Date().toISOString(),
+    datetime: formatDateTime(iso),
+    datetimeISO: iso,
     folio: fullFolio(),
     clientName: $("client-name").value,
     clientTaxId: $("client-taxid").value,
@@ -762,7 +764,7 @@ function zipStore(files) {
 }
 
 function buildXlsx() {
-  const db = getDB().slice().sort((a, b) => (a.datetime < b.datetime ? 1 : -1));
+  const db = getDB().slice().sort((a, b) => ((a.datetimeISO || a.datetime) < (b.datetimeISO || b.datetime) ? 1 : -1));
 
   const n = (v) => (typeof v === "number" && isFinite(v) ? v : (parseFloat(v) || 0));
 
