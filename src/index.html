@@ -219,17 +219,19 @@
           <div id="r-client-taxid" class="r-line"></div>
         </div>
 
-        <table class="receipt-table">
-          <thead>
-            <tr>
-              <th class="col-qty" data-i18n="qty">Cantidad</th>
-              <th class="col-desc" data-i18n="description">Descripción</th>
-              <th class="col-price" data-i18n="unit_price">Precio Unit.</th>
-              <th class="col-amount" data-i18n="amount">Importe</th>
-            </tr>
-          </thead>
-          <tbody id="r-items"></tbody>
-        </table>
+        <div class="table-scroll">
+          <table class="receipt-table">
+            <thead>
+              <tr>
+                <th class="col-qty" data-i18n="qty">Cantidad</th>
+                <th class="col-desc" data-i18n="description">Descripción</th>
+                <th class="col-price" data-i18n="unit_price">Precio Unit.</th>
+                <th class="col-amount" data-i18n="amount">Importe</th>
+              </tr>
+            </thead>
+            <tbody id="r-items"></tbody>
+          </table>
+        </div>
 
         <div class="receipt-totals">
           <div class="t-row"><span data-i18n="subtotal">Subtotal</span><span id="r-subtotal"></span></div>

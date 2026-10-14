@@ -165,6 +165,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--brand); bor
 .receipt-client { margin: 18px 0; }
 .r-label { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 4px; }
 
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .receipt-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
 .receipt-table th, .receipt-table td { padding: 9px 8px; font-size: 13px; text-align: left; }
 .receipt-table thead th { background: var(--accent); color: #fff; font-weight: 600; }
@@ -294,12 +295,12 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--brand); bor
   .receipt-head { flex-direction: column; gap: 12px; }
   .receipt-meta { text-align: left; }
   .r-badge, .r-status { text-align: left; }
-  .receipt-table { table-layout: fixed; }
-  .receipt-table th, .receipt-table td { padding: 6px 4px; font-size: 12px; }
-  .receipt-table .col-qty, .receipt-table td.c-qty { width: 42px; }
+  .receipt-table { min-width: 440px; table-layout: auto; }
+  .receipt-table th, .receipt-table td { padding: 6px 8px; font-size: 12px; white-space: nowrap; }
+  .receipt-table .col-qty, .receipt-table td.c-qty { width: auto; text-align: center; }
   .receipt-table .col-price, .receipt-table td.c-price,
-  .receipt-table .col-amount, .receipt-table td.c-amount { width: 72px; }
-  .c-desc { word-break: break-word; }
+  .receipt-table .col-amount, .receipt-table td.c-amount { width: auto; text-align: right; }
+  .c-desc { word-break: break-word; white-space: normal; }
   .receipt-totals { width: 100%; }
 }
 
