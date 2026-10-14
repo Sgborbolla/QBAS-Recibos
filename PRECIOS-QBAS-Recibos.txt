@@ -49,8 +49,25 @@ cobrar directo desde ahi (sin PayPal/Stripe):
   * Criptomoneda (USDT, Bitcoin, etc.)
   * QvaPay
   * TropiPay
+  * Zelle (clientes en el extranjero)
+
+ZELLE: quien quiera pagar por Zelle DEBE escribirte ANTES por
+WhatsApp para acordar el pago. No se acepta Zelle sin avisar
+primero. (Ver seccion CONTACTO mas abajo.)
+
 Esto cubre tanto a clientes de Cuba como del extranjero. El
 cliente paga en tu marketplace y descarga el .exe / .apk.
+
+CONTACTO
+--------
+WhatsApp: [pon aqui tu numero de WhatsApp]
+Correo:   [pon aqui tu correo, si quieres]
+
+Instrucciones para el cliente que paga por Zelle:
+  1) Escribeme primero por WhatsApp.
+  2) Te doy los datos y confirmo disponibilidad.
+  3) Realizas el pago por Zelle.
+  4) Me envias el comprobante y te entrego el .exe / .apk.
 
 IMPORTANTE: PayPal, Stripe, Wise, Skrill y la mayoria de las
 pasarelas NO funcionan para cobrar desde Cuba. Por eso conviene
