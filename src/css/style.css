@@ -30,6 +30,7 @@ body {
               linear-gradient(160deg, #f4faff 0%, #eaf2ff 55%, #dce9ff 100%);
   background-attachment: fixed;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .app-header {
@@ -83,6 +84,7 @@ body {
   padding: 20px;
   align-items: start;
 }
+.layout > * { min-width: 0; }
 
 .panel { background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow); }
 .form-panel { padding: 18px; display: flex; flex-direction: column; gap: 18px; }
@@ -295,11 +297,14 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--brand); bor
   .receipt-head { flex-direction: column; gap: 12px; }
   .receipt-meta { text-align: left; }
   .r-badge, .r-status { text-align: left; }
-  .receipt-table { min-width: 440px; table-layout: auto; }
-  .receipt-table th, .receipt-table td { padding: 6px 8px; font-size: 12px; white-space: nowrap; }
-  .receipt-table .col-qty, .receipt-table td.c-qty { width: auto; text-align: center; }
-  .receipt-table .col-price, .receipt-table td.c-price,
-  .receipt-table .col-amount, .receipt-table td.c-amount { width: auto; text-align: right; }
+  /* Que la tabla del recibo quepa en la pantalla (sin scroll lateral) */
+  .table-scroll { overflow-x: visible; }
+  .receipt-table { min-width: 0; width: 100%; table-layout: fixed; }
+  .receipt-table th, .receipt-table td { padding: 6px 5px; font-size: 11.5px; white-space: normal; }
+  .receipt-table .col-qty, .receipt-table td.c-qty { width: 16%; text-align: center; }
+  .receipt-table .col-desc { width: 38%; }
+  .receipt-table .col-price, .receipt-table td.c-price { width: 22%; text-align: right; }
+  .receipt-table .col-amount, .receipt-table td.c-amount { width: 24%; text-align: right; }
   .c-desc { word-break: break-word; white-space: normal; }
   .receipt-totals { width: 100%; }
 }
