@@ -1,6 +1,11 @@
 {
   "applicationId": "com.qbaswing.qbasrecibos",
   "version": "1.0.0",
+  "applicationName": "QBAS - Generador de Recibos",
+  "author": "QBASWING DESIGNER - Dr. Sergio Grabiel Borbolla Verdecia",
+  "description": "Generador de recibos profesionales (ES/EN, 100% sin conexion)",
+  "copyright": "Copyright (c) 2026 QBASWING DESIGNER. Todos los derechos reservados.",
+  "applicationIcon": "src/img/qbas-icon.png",
   "defaultMode": "window",
   "port": 0,
   "documentRoot": "/src/",

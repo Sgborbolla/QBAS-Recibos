@@ -87,19 +87,12 @@ jobs:
           npx cap sync android
 
       - name: Aplicar icono de la app
-        continue-on-error: true
         run: |
           set -e
           RES=android/app/src/main/res
-          declare -A SIZES=( [mdpi]=48 [hdpi]=72 [xhdpi]=96 [xxhdpi]=144 [xxxhdpi]=192 )
-          for d in "${!SIZES[@]}"; do
-            s=${SIZES[$d]}
-            convert -background none src/img/qbas-icon.png -resize ${s}x${s} "$RES/mipmap-$d/ic_launcher.png"
-            convert -background none src/img/qbas-icon.png -resize ${s}x${s} "$RES/mipmap-$d/ic_launcher_round.png"
-            big=$((s*2))
-            convert -background none src/img/qbas-icon.png -resize ${s}x${s} \
-              -gravity center -background none -extent ${big}x${big} "$RES/mipmap-$d/ic_launcher_foreground.png"
-          done
+          cp -rv android-icons/* "$RES"/
+          echo "--- iconos instalados ---"
+          ls -la "$RES"/mipmap-*/ic_launcher*.png
 
       - name: Preparar keystore para Play Store
         run: |
