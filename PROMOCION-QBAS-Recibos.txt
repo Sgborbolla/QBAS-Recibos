@@ -1,0 +1,79 @@
+============================================================
+ QBAS - GENERADOR DE RECIBOS / RECEIPT GENERATOR
+ by QBASWING DESIGNER
+============================================================
+
+Crea recibos profesionales en SEGUNDOS, desde tu PC o tu
+telefono, y 100% SIN INTERNET. Un solo pago, para siempre.
+
+
+QUE ES
+------
+Una aplicacion completa para hacer recibos con aspecto
+profesional. Funciona totalmente offline (no necesita internet
+ni cuenta). Ideal para negocios, tecnicos, repartidores,
+trabajadores por cuenta propia, consultorios, etc.
+
+
+INCLUYE (TODO)
+--------------
+- Bilingue: Espanol e Ingles (un boton para cambiar).
+- 50+ monedas y moneda personalizada (incluye CUP, USD, EUR...).
+- Datos de emisor y cliente con ID fiscal y telefono.
+- Conceptos ilimitados (cantidad, descripcion, precio, importe).
+- Descuento por monto o porcentaje.
+- Impuesto configurable (IVA u otro).
+- Fecha y vencimiento, folio automatico con prefijo.
+- Estado del recibo (Pagado / Pendiente) y metodo de pago.
+- 3 plantillas (Clasica, Moderna, Compacta) y color a tu gusto.
+- Tu propio logo en el recibo.
+- Historial de recibos guardados.
+- Exportar e Importar (HTML/JSON).
+- Imprimir o Guardar en PDF con un clic.
+
+
+REQUISITOS
+----------
+- PC: Windows (tambien disponible Linux y Mac).
+- Movil: Android (archivo .apk).
+- No necesita internet para funcionar.
+
+
+PRECIO (PROMOCION DE LANZAMIENTO)
+---------------------------------
+  PAQUETE PC (Windows/Linux/Mac) ....... 12 USD  /  500 CUP
+  PAQUETE ANDROID (.apk) ...............  9 USD  /  400 CUP
+  COMBO (PC + Android) ................. 18 USD  /  800 CUP
+
+Pago UNICO. Sin mensualidad. Sin costo de internet.
+Cada paquete es para 1 dispositivo.
+(Despues de la promocion, los precios suben: PC 20 USD / 1.000 CUP,
+Android 15 USD / 800 CUP.)
+
+
+COMO COMPRAR
+------------
+Escríbeme y te atiendo enseguida:
+
+  WhatsApp: +53 58147030
+  Correo:   sgborbolla@gmail.com
+
+Formas de pago:
+  * Criptomoneda (USDT, Bitcoin, etc.)
+  * QvaPay
+  * TropiPay
+  * Zelle (solo clientes en el extranjero y AVISANDO ANTES
+    por WhatsApp para acordar el pago)
+
+
+ENTREGA
+-------
+Al confirmar el pago recibes el instalador (.exe para PC o
+.apk para Android) y todas las instrucciones de instalacion.
+Soporte disponible por WhatsApp.
+
+
+============================================================
+ (c) 2026 QBASWING DESIGNER
+ Dr. Sergio Grabiel Borbolla Verdecia - Todos los derechos reservados
+============================================================
