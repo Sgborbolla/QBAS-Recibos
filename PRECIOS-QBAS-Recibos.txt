@@ -1,79 +1,119 @@
 ============================================================
- QBAS - Generador de Recibos
- GUIA DE PRECIOS Y VENTA
+ QBAS - Generador de Recibos / Receipt Generator
+ GUIA DE PRECIOS Y VENTA (CUBA + INTERNACIONAL)
  by QBASWING DESIGNER
 ============================================================
 
 PRODUCTO
 --------
 Aplicacion 100% sin conexion (offline) para generar recibos
-profesionales, bilingue (ES/EN), con moneda personalizable
-(incluye CUP) y diseno profesional. Se entrega como instalador
-real (.exe para Windows / .apk para Android). Un solo pago,
+profesionales. Bilingue (ES/EN), con moneda personalizable
+(incluye CUP, USD, EUR y 50+ monedas), plantillas, temas,
+historial e importar/exportar HTML. Se entrega como instalador
+real (.exe para Windows y .apk para Android). Un solo pago,
 sin mensualidad y sin necesidad de internet.
 
 
-PRECIOS SUGERIDOS
------------------
+------------------------------------------------------------------------
+ 1) MERCADO INTERNACIONAL (lo principal)
+------------------------------------------------------------------------
+Se vende en USD (o EUR). Es un pago unico por licencia.
+
++---------------------------------------------+------------------+
+| Edicion                                     | Precio (USD)     |
++---------------------------------------------+------------------+
+| Personal (1 dispositivo)                    | 9 - 12 USD       |
+| Negocio / Business (2 dispositivos)         | 19 - 25 USD      |
+| Pro (3 dispositivos + logo + soporte 1 mes  | 29 - 39 USD      |
+|   + actualizaciones)                        |                  |
++---------------------------------------------+------------------+
+
+EQUIVALENTE EN EUR: resta ~10% (ej: Personal 9-11 EUR,
+Negocio 17-23 EUR, Pro 27-35 EUR).
+
+PROMOCION DE LANZAMIENTO: 50% de descuento las primeras
+ventas (ej: Personal 5 USD) para conseguir resenas y clientes.
+
+Que se puede sumar al precio:
+- Personalizacion con el logo del cliente: +10 USD
+- Soporte prioritario 1 mes: +10 USD
+- Licencia para 5 dispositivos (empresa): 49 - 79 USD
+- Version "white label" (sin tu marca, con la suya): desde 99 USD
+
+
+DONDE VENDERLO INTERNACIONALMENTE
+---------------------------------
+- Gumroad, Lemon Squeezy, Payhip (faciles, aceptan tarjeta).
+- Tu propia pagina web (ej: con un boton de pago PayPal/Stripe).
+- Ko-fi / Buy Me a Coffee (para versiones simples).
+- Facebook / Instagram / TikTok / Reddit (grupos de negocios y
+  emprendedores) enlazando a la pagina de compra.
+- Marketplaces de software (si aceptan autores independientes).
+
+COBRO INTERNACIONAL
+-------------------
+- PayPal, Stripe, Wise, Zelle, Skrill.
+- Entrega automatica del .exe/.apk tras el pago (con enlace).
+
+
+------------------------------------------------------------------------
+ 2) MERCADO DE CUBA
+------------------------------------------------------------------------
+Se vende en CUP. Pago unico por licencia.
+
 +---------------------------------------------+------------------+
 | Cliente                                     | Precio sugerido  |
 +---------------------------------------------+------------------+
 | Uso personal (1 dispositivo)                | 500 - 800 CUP    |
-|                                             | (~2 - 3 USD)     |
-+---------------------------------------------+------------------+
 | Licencia comercial (negocio)                | 1.500 - 3.000 CUP|
-|                                             | (~6 - 12 USD)    |
-+---------------------------------------------+------------------+
 | Pack negocio + soporte + actualizaciones    | 3.000 - 5.000 CUP|
 +---------------------------------------------+------------------+
-| Fuera de Cuba (venta por internet)          | 5 - 15 USD       |
-|                                             | por licencia     |
-+---------------------------------------------+------------------+
-
-
-POR QUE VALE ESE PRECIO
------------------------
-- Sin mensualidad ni internet: gran ventaja, se cobra una sola vez.
-- Bilingue (ES/EN) y con CUP incluido: sirve a negocios, no solo personas.
-- Instalador real (.exe / .apk) y firma para Google Play: se ve profesional.
-- Historial de recibos, plantillas, temas, exportar/importar HTML.
-- Autor: Dr. Sergio Grabiel Borbolla Verdecia (QBASWING DESIGNER).
-
-
-RECOMENDACION PRACTICA
-----------------------
-Empieza en 800 CUP para personas y 2.000 CUP para negocios.
-Sube el precio segun la demanda. Ofrece descuento por compra de
-varias licencias (ej: 3 licencias x 1.800 CUP).
-
-
-QUE PUEDES COBRAR EXTRA
------------------------
-- Instalacion y configuracion: +300 CUP
-- Personalizacion con el logo/nombre del cliente: +500 CUP
-- Soporte por WhatsApp (1 mes): +500 CUP
-- Actualizaciones futuras incluidas: +500 CUP
-
-
-IDEAS DE PAQUETES
------------------
-1) PERSONAL      - 1 PC o 1 telefono ................ 800 CUP
-2) NEGOCIO       - 2 dispositivos + logo propio ..... 2.000 CUP
-3) PREMIUM       - 3 dispositivos + logo + soporte
-                   1 mes + actualizaciones .......... 3.500 CUP
-
 
 TEXTO PUBLICITARIO (ES)
 -----------------------
 "QBAS - Generador de Recibos. Crea recibos profesionales en
-segundos, desde tu PC o telefono, SIN internet. Disenado para
-negocios en Cuba. Un solo pago, de por vida. Escríbeme."
+segundos, desde tu PC o telefono, SIN internet. Un solo pago,
+de por vida. Escríbeme."
+
+
+------------------------------------------------------------------------
+ 3) RECOMENDACION PRACTICA
+------------------------------------------------------------------------
+- Cuba: empieza en 800 CUP (personas) y 2.000 CUP (negocios).
+- Internacional: empieza en 9 USD (personal) y 19 USD (negocio).
+- Sube el precio segun la demanda.
+- Descuento por volumen (ej: 3 licencias con 20% off).
+
+
+4) PAQUETES (INTERNACIONAL)
+---------------------------
+1) PERSONAL  - 1 dispositivo ...................... 9 USD
+2) BUSINESS  - 2 dispositivos + logo propio ....... 19 USD
+3) PRO       - 3 dispositivos + logo + soporte
+               1 mes + actualizaciones ........... 29 USD
+
+4) PAQUETES (CUBA)
+------------------
+1) PERSONAL  - 1 dispositivo ...................... 800 CUP
+2) NEGOCIO   - 2 dispositivos + logo propio ....... 2.000 CUP
+3) PREMIUM   - 3 dispositivos + logo + soporte
+               1 mes + actualizaciones ........... 3.500 CUP
+
+
+POR QUE VALE ESO
+----------------
+- Sin mensualidad ni internet: gran ventaja, se cobra una sola vez.
+- Bilingue (ES/EN) y con muchas monedas: sirve a cualquier pais.
+- Instalador real (.exe / .apk) y firma para Google Play.
+- Historial de recibos, plantillas, temas, exportar/importar HTML.
+- Autor: Dr. Sergio Grabiel Borbolla Verdecia (QBASWING DESIGNER).
+
 
 TEXTO PUBLICITARIO (EN)
 -----------------------
 "QBAS - Receipt Generator. Create professional receipts in
-seconds, on your PC or phone, fully OFFLINE. One-time payment.
-Contact me."
+seconds, on your PC or phone, fully OFFLINE. Multiple currencies.
+One-time payment. Contact me."
 
 
 ============================================================
