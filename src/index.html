@@ -11,16 +11,36 @@
 
   <header class="app-header no-print">
     <div class="brand">
-      <img src="img/qbas-logo.png" alt="QBASWING" class="brand-logo" />
+      <img src="img/qbas-logo.png" alt="QBASWING DESIGNER" class="brand-logo" />
       <div class="brand-text">
         <h1 data-i18n="title">QBAS - Generador de Recibos</h1>
         <p data-i18n="subtitle">Recibos profesionales, 100% sin conexión</p>
       </div>
     </div>
 
-    <div class="lang-switch">
-      <button type="button" id="btn-es" class="lang-btn active">ES</button>
-      <button type="button" id="btn-en" class="lang-btn">EN</button>
+    <div class="header-tools">
+      <label class="inline">
+        <span data-i18n="theme">Plantilla</span>
+        <select id="theme-select">
+          <option value="classic" data-i18n="theme_classic">Clásica</option>
+          <option value="modern" data-i18n="theme_modern">Moderna</option>
+          <option value="compact" data-i18n="theme_compact">Compacta</option>
+        </select>
+      </label>
+      <label class="inline">
+        <span data-i18n="accent">Color</span>
+        <input type="color" id="accent-color" value="#1f6feb" />
+      </label>
+      <button type="button" id="btn-history" class="btn small" data-i18n="history">Historial</button>
+      <button type="button" id="btn-export" class="btn small" data-i18n="export_json">Exportar</button>
+      <label class="btn small file-inline">
+        <span data-i18n="import_json">Importar</span>
+        <input type="file" id="import-json" accept=".html,.json,text/html,application/json" />
+      </label>
+      <div class="lang-switch">
+        <button type="button" id="btn-es" class="lang-btn active">ES</button>
+        <button type="button" id="btn-en" class="lang-btn">EN</button>
+      </div>
     </div>
   </header>
 
@@ -33,11 +53,16 @@
         <label><span data-i18n="issuer_name">Nombre</span>
           <input type="text" id="issuer-name" autocomplete="off" />
         </label>
+        <div class="row">
+          <label><span data-i18n="tax_id">ID fiscal</span>
+            <input type="text" id="issuer-taxid" autocomplete="off" />
+          </label>
+          <label><span data-i18n="issuer_phone">Teléfono</span>
+            <input type="text" id="issuer-phone" autocomplete="off" />
+          </label>
+        </div>
         <label><span data-i18n="issuer_address">Dirección</span>
           <input type="text" id="issuer-address" autocomplete="off" />
-        </label>
-        <label><span data-i18n="issuer_phone">Teléfono</span>
-          <input type="text" id="issuer-phone" autocomplete="off" />
         </label>
         <div class="logo-controls">
           <label class="file-label"><span data-i18n="logo_upload">Subir logo (opcional)</span>
@@ -52,11 +77,16 @@
         <label><span data-i18n="client_name">Nombre</span>
           <input type="text" id="client-name" autocomplete="off" />
         </label>
+        <div class="row">
+          <label><span data-i18n="tax_id">ID fiscal</span>
+            <input type="text" id="client-taxid" autocomplete="off" />
+          </label>
+          <label><span data-i18n="client_phone">Teléfono</span>
+            <input type="text" id="client-phone" autocomplete="off" />
+          </label>
+        </div>
         <label><span data-i18n="client_address">Dirección</span>
           <input type="text" id="client-address" autocomplete="off" />
-        </label>
-        <label><span data-i18n="client_phone">Teléfono</span>
-          <input type="text" id="client-phone" autocomplete="off" />
         </label>
       </div>
 
@@ -66,16 +96,48 @@
           <label><span data-i18n="date">Fecha</span>
             <input type="date" id="receipt-date" />
           </label>
+          <label><span data-i18n="due_date">Vencimiento</span>
+            <input type="date" id="receipt-duedate" />
+          </label>
+        </div>
+        <div class="row">
+          <label><span data-i18n="folio_prefix">Prefijo folio</span>
+            <input type="text" id="folio-prefix" placeholder="QB-" autocomplete="off" />
+          </label>
           <label><span data-i18n="folio">Folio</span>
             <input type="text" id="receipt-folio" autocomplete="off" />
+          </label>
+        </div>
+        <div class="row">
+          <label><span data-i18n="payment">Método de pago</span>
+            <select id="payment-method">
+              <option value="cash" data-i18n="pay_cash">Efectivo</option>
+              <option value="transfer" data-i18n="pay_transfer">Transferencia</option>
+              <option value="card" data-i18n="pay_card">Tarjeta</option>
+              <option value="other" data-i18n="pay_other">Otro</option>
+            </select>
+          </label>
+          <label><span data-i18n="status">Estado</span>
+            <select id="receipt-status">
+              <option value="paid" data-i18n="status_paid">Pagado</option>
+              <option value="pending" data-i18n="status_pending">Pendiente</option>
+            </select>
           </label>
         </div>
         <label><span data-i18n="currency">Moneda</span>
           <select id="currency-select"></select>
         </label>
-        <label id="custom-currency-wrap" class="hidden"><span data-i18n="custom_currency">Moneda personalizada</span>
-          <input type="text" id="currency-custom" data-i18n-placeholder="custom_currency_placeholder" placeholder="Escribe tu símbolo, ej: S/" autocomplete="off" />
-        </label>
+        <div class="row">
+          <label id="custom-currency-wrap" class="hidden"><span data-i18n="custom_currency">Moneda personalizada</span>
+            <input type="text" id="currency-custom" data-i18n-placeholder="custom_currency_placeholder" placeholder="Escribe tu símbolo, ej: S/" autocomplete="off" />
+          </label>
+          <label><span data-i18n="currency_position">Posición</span>
+            <select id="currency-position">
+              <option value="before" data-i18n="pos_before">Antes ($ 100)</option>
+              <option value="after" data-i18n="pos_after">Después (100 $)</option>
+            </select>
+          </label>
+        </div>
       </div>
 
       <div class="group">
@@ -97,22 +159,39 @@
             <input type="number" id="discount-value" min="0" step="0.01" value="0" />
           </label>
         </div>
+        <div class="row">
+          <label class="check">
+            <input type="checkbox" id="tax-enabled" />
+            <span data-i18n="apply_tax">Aplicar impuesto</span>
+          </label>
+          <label><span data-i18n="tax_name">Nombre del impuesto</span>
+            <input type="text" id="tax-name" value="IVA" autocomplete="off" />
+          </label>
+          <label><span data-i18n="tax_rate">Tasa (%)</span>
+            <input type="number" id="tax-rate" min="0" step="0.01" value="0" />
+          </label>
+        </div>
       </div>
 
       <div class="group">
         <h2 data-i18n="notes_section">Notas</h2>
         <textarea id="notes" rows="3" data-i18n-placeholder="notes_placeholder" placeholder="Gracias por su preferencia"></textarea>
+        <label class="check">
+          <input type="checkbox" id="sign-enabled" />
+          <span data-i18n="show_signature">Mostrar línea de firma</span>
+        </label>
       </div>
 
       <div class="actions">
         <button type="button" id="btn-print" class="btn primary" data-i18n="print">Imprimir / Guardar PDF</button>
+        <button type="button" id="btn-save" class="btn" data-i18n="save_history">Guardar</button>
         <button type="button" id="btn-new" class="btn" data-i18n="new_receipt">Nuevo recibo</button>
       </div>
 
     </section>
 
     <section class="panel preview-panel">
-      <div class="receipt" id="receipt">
+      <div class="receipt theme-classic" id="receipt">
         <div class="receipt-head">
           <div class="receipt-issuer">
             <img id="receipt-logo" class="receipt-logo hidden" alt="Logo" />
@@ -120,12 +199,15 @@
               <div id="r-issuer-name" class="r-name"></div>
               <div id="r-issuer-address" class="r-line"></div>
               <div id="r-issuer-phone" class="r-line"></div>
+              <div id="r-issuer-taxid" class="r-line"></div>
             </div>
           </div>
           <div class="receipt-meta">
             <div id="r-receipt-word" class="r-badge">RECIBO</div>
+            <div id="r-status" class="r-status"></div>
             <div class="r-meta-line"><span data-i18n="folio">Folio</span>: <span id="r-folio"></span></div>
             <div class="r-meta-line"><span data-i18n="date">Fecha</span>: <span id="r-date"></span></div>
+            <div class="r-meta-line" id="r-duedate-row"><span data-i18n="due_date">Vencimiento</span>: <span id="r-duedate"></span></div>
           </div>
         </div>
 
@@ -134,6 +216,7 @@
           <div id="r-client-name" class="r-name"></div>
           <div id="r-client-address" class="r-line"></div>
           <div id="r-client-phone" class="r-line"></div>
+          <div id="r-client-taxid" class="r-line"></div>
         </div>
 
         <table class="receipt-table">
@@ -151,7 +234,17 @@
         <div class="receipt-totals">
           <div class="t-row"><span data-i18n="subtotal">Subtotal</span><span id="r-subtotal"></span></div>
           <div class="t-row" id="r-discount-row"><span data-i18n="discount">Descuento</span><span id="r-discount"></span></div>
+          <div class="t-row" id="r-tax-row"><span id="r-tax-label">IVA</span><span id="r-tax"></span></div>
           <div class="t-row total"><span data-i18n="total">Total</span><span id="r-total"></span></div>
+        </div>
+
+        <div class="receipt-payment">
+          <span data-i18n="payment">Método de pago</span>: <span id="r-payment"></span>
+        </div>
+
+        <div class="receipt-sign hidden" id="r-sign">
+          <div class="sign-line"></div>
+          <div class="sign-label" data-i18n="signature">Firma</div>
         </div>
 
         <div class="receipt-notes" id="r-notes"></div>
@@ -159,6 +252,21 @@
     </section>
 
   </main>
+
+  <footer class="app-footer no-print">
+    <span data-i18n="footer_rights">© 2026 QBASWING DESIGNER — Dr. Sergio Grabiel Borbolla Verdecia. Todos los derechos reservados.</span>
+    <span class="footer-ver" data-i18n="footer_version">QBAS - Generador de Recibos v1.0</span>
+  </footer>
+
+  <div class="modal-overlay hidden no-print" id="history-modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 data-i18n="history_title">Recibos guardados</h3>
+        <button type="button" id="history-close" class="btn small">✕</button>
+      </div>
+      <div class="modal-body" id="history-list"></div>
+    </div>
+  </div>
 
   <script src="js/i18n.js"></script>
   <script src="js/currency.js"></script>
