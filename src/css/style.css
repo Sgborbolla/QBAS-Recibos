@@ -24,9 +24,10 @@ html, body {
 }
 
 body {
-  background: radial-gradient(1200px 800px at 0% 0%, #eef2ff, transparent 40%),
-              radial-gradient(1000px 700px at 100% 0%, #f0f9ff, transparent 35%),
-              linear-gradient(160deg, #f5f7fa 0%, #eef2f9 55%, #e5e9f2 100%);
+  background: radial-gradient(1200px 900px at 0% 0%, #e0f2fe, transparent 40%),
+              radial-gradient(1100px 800px at 100% 0%, #e8f3ff, transparent 38%),
+              radial-gradient(900px 700px at 0% 100%, #f0f9ff, transparent 32%),
+              linear-gradient(160deg, #f4faff 0%, #eaf2ff 55%, #dce9ff 100%);
   background-attachment: fixed;
   min-height: 100vh;
 }
