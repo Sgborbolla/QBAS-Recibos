@@ -585,7 +585,12 @@ function formatDateTime(iso) {
   const date = LANG === "en"
     ? `${p(d.getMonth() + 1)}/${p(d.getDate())}/${d.getFullYear()}`
     : `${p(d.getDate())}/${p(d.getMonth() + 1)}/${d.getFullYear()}`;
-  return `${date} ${p(d.getHours())}:${p(d.getMinutes())}`;
+  let h = d.getHours();
+  const ampm = h < 12
+    ? (LANG === "en" ? "AM" : "a. m.")
+    : (LANG === "en" ? "PM" : "p. m.");
+  h = h % 12; if (h === 0) h = 12;
+  return `${date} ${h}:${p(d.getMinutes())} ${ampm}`;
 }
 
 function buildReceiptRecord() {
