@@ -101,14 +101,30 @@ jobs:
               -gravity center -background none -extent ${big}x${big} "$RES/mipmap-$d/ic_launcher_foreground.png"
           done
 
-      - name: Crear keystore para Play Store
+      - name: Preparar keystore para Play Store
         run: |
-          keytool -genkeypair -v \
-            -keystore "$RUNNER_TEMP/qbas-upload.keystore" \
-            -alias qbasupload \
-            -keyalg RSA -keysize 2048 -validity 10000 \
-            -storepass qbas12345 -keypass qbas12345 \
-            -dname "CN=QBASWING DESIGNER, O=QBASWING DESIGNER, C=CU"
+          set -e
+          if [ -f keystore/qbas-upload.keystore ]; then
+            echo "Usando keystore existente del repositorio"
+            cp keystore/qbas-upload.keystore "$RUNNER_TEMP/qbas-upload.keystore"
+          else
+            echo "Generando keystore nuevo (solo la primera vez)"
+            keytool -genkeypair -v \
+              -keystore "$RUNNER_TEMP/qbas-upload.keystore" \
+              -alias qbasupload \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass qbas12345 -keypass qbas12345 \
+              -dname "CN=QBASWING DESIGNER, O=QBASWING DESIGNER, C=CU"
+            mkdir -p keystore
+            cp "$RUNNER_TEMP/qbas-upload.keystore" keystore/qbas-upload.keystore
+          fi
+
+      - name: Guardar keystore como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: QBAS-Recibos-KEYSTORE-PRIVADO
+          path: keystore/qbas-upload.keystore
+          if-no-files-found: warn
 
       - name: Compilar APK y AAB firmados
         run: |
