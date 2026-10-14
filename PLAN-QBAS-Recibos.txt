@@ -1,0 +1,137 @@
+================================================================
+PLAN DE PROYECTO - QBAS-Recibos
+================================================================
+Compania : QBASWING DESIGNER
+Autor    : Dr. Sergio Grabiel Borbolla Verdecia
+Repo     : https://github.com/Sgborbolla/QBAS-Recibos
+Push     : SSH (autenticado como Sgborbolla)
+Fecha    : 2026-10-14
+================================================================
+
+1. OBJETIVO
+----------------------------------------------------------------
+Generador de Recibos universal que se compile a:
+  - .exe  para PC (Windows) via Neutralinojs (servidor localhost)
+  - .apk  para Android via Capacitor (WebView 100% offline)
+Sin demo web. Sin marca de agua. Sin links externos.
+Todo compilado automaticamente con GitHub Actions al hacer push.
+
+2. NOMBRE
+----------------------------------------------------------------
+Archivos finales : QBAS-Recibos.exe  /  QBAS-Recibos.apk
+Titulo interno ES: QBAS - Generador de Recibos
+Titulo interno EN: QBAS - Receipt Generator
+
+3. CARACTERISTICAS
+----------------------------------------------------------------
+- Bilingue ES / EN con selector visible y cambio instantaneo.
+- Preferencia de idioma guardada en localStorage (por defecto ES).
+- 100% offline (localhost en .exe / WebView embebido en .apk).
+- Sin login, sin backend, sin base de datos externa.
+- Sin demo, sin marca de agua, sin enlaces externos.
+
+4. FUNCIONALIDADES
+----------------------------------------------------------------
+- Formulario: Emisor (nombre, direccion, telefono, logo opcional)
+- Cliente (nombre, direccion, telefono - opcionales)
+- Datos del recibo: fecha y folio (automatico)
+- Tabla de conceptos: Cantidad, Descripcion, Precio Unitario
+  * Agregar fila / Eliminar fila
+  * Subtotal por fila automatico (cantidad * precio)
+- Totales: Subtotal, Descuento (monto o %), Total Neto automatico
+- Notas / pie de recibo (texto libre)
+- Logo opcional (solo local, no se sube a ningun servidor)
+- Folio automatico: se genera e incrementa (+1) al limpiar/nuevo
+- Guardado local de campos en localStorage
+- Imprimir / Guardar PDF (window.print), oculta UI al imprimir
+
+5. MONEDAS
+----------------------------------------------------------------
+Lista amplia + opcion "Moneda personalizada".
+Incluye CUP (Peso Cubano) por indicacion del autor (vive en Cuba).
+Previstas: USD, EUR, GBP, CUP, MXN, COP, PEN, ARS, BRL, CLP, UYU,
+BOB, CRC, GTQ, HNL, NIO, PAB, DOP, VES, CAD, AUD, NZD, CHF, JPY,
+CNY, HKD, SGD, KRW, INR, IDR, MYR, PHP, THB, VND, ZAR, EGP, MAD,
+NGN, GHS, PLN, CZK, HUF, RON, BGN, RSD, UAH, RUB, BYN, KZT, TRY,
+ILS, SAR, AED, QAR, KWD, OMR, BHD, JOD.
+Por defecto: $ (USD). Editable siempre.
+
+6. LOGO
+----------------------------------------------------------------
+Origen : /sdcard/Tatica/logotipo 2.jpg
+Real   : PNG 1024x1024 sRGB, sin canal alfa (sin transparencia).
+Accion : re-encodificar y reescalar a 512x512 -> src/img/qbas-logo.png
+Uso    : cabecera de la app + recibo impreso.
+Nota   : se deja sin quitar fondo para no danarlo (modelo no ve imagen).
+
+7. ESTRUCTURA DEL REPOSITORIO
+----------------------------------------------------------------
+QBAS-Recibos/
+|- .github/workflows/build.yml     # Compila .exe + .apk
+|- src/                            # Codigo compartido
+|  |- index.html
+|  |- css/style.css
+|  |- js/app.js
+|  |- js/i18n.js                   # Traducciones ES/EN
+|  |- js/currency.js               # Monedas + personalizada
+|  |- img/qbas-logo.png
+|- neutralino/neutralino.config.json
+|- android/capacitor.config.json
+|- android/package.json
+|- android/.gitignore
+|- README.md
+|- LICENSE
+
+8. STACK
+----------------------------------------------------------------
+- Neutralinojs  -> .exe (ligero, localhost)
+- CapacitorJS   -> .apk (WebView offline)
+- GitHub Actions-> compila ambos al hacer push
+
+9. GITHUB ACTIONS (.github/workflows/build.yml)
+----------------------------------------------------------------
+Job 1 (.exe):
+  - Instalar Node + @neutralinojs/neu
+  - Preparar recursos desde src/
+  - neu build --release  (Windows)
+  - Artefacto: QBAS-Recibos.exe
+Job 2 (.apk):
+  - Instalar Node
+  - npm install en android/ ; npx cap sync android
+  - Configurar JDK + Android SDK
+  - ./gradlew assembleRelease
+  - Artefacto: QBAS-Recibos.apk
+
+10. PASOS DE IMPLEMENTACION
+----------------------------------------------------------------
+1) Convertir logo a src/img/qbas-logo.png (512x512)
+2) Crear src/ (index.html, style.css, i18n.js, currency.js, app.js)
+3) Configurar Neutralino (neutralino.config.json)
+4) Configurar Capacitor (android/)
+5) Crear workflow .github/workflows/build.yml
+6) Crear README.md y LICENSE
+7) git init, commit, push por SSH al repo QBAS-Recibos
+8) Verificar que Actions genere los artefactos
+
+11. CRITERIOS DE ACEPTACION
+----------------------------------------------------------------
+- Selector ES/EN visible y funcional en todos los textos
+- Preferencia de idioma persistente
+- Lista de monedas + personalizada (incluye CUP)
+- Folio automatico correcto
+- Descuento monto/% y totales correctos
+- Logo opcional y en recibo impreso
+- Imprimir/PDF oculta formulario, selector y botones
+- Mismos src/ para .exe y .apk
+- Workflow genera .exe y .apk sin errores
+- 100% offline, sin demo, sin marca de agua
+
+12. PENDIENTE / ESTADO
+----------------------------------------------------------------
+[ OK ] SSH a GitHub verificado
+[ OK ] git config (Sgborbolla) verificado
+[ OK ] Repo vacio listo
+[ OK ] Logo localizado
+[ AVISO ] Modelo no puede ver la imagen (solo convertir)
+[ PENDIENTE ] Salir de modo plan para ejecutar
+================================================================

@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+
+# Neutralino
+dist/
+neutralino.js
+/src/js/neutralino.js
+/.tmp/
+
+# Capacitor / Android
+/android/.gradle/
+/android/local.properties
+/android/app/build/
+/android/build/
+/android/captures/
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# Sistema
+.DS_Store
+Thumbs.db

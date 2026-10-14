@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QBAS - Generador de Recibos</title>
+  <link rel="icon" href="img/qbas-logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="app-header no-print">
+    <div class="brand">
+      <img src="img/qbas-logo.png" alt="QBASWING" class="brand-logo" />
+      <div class="brand-text">
+        <h1 data-i18n="title">QBAS - Generador de Recibos</h1>
+        <p data-i18n="subtitle">Recibos profesionales, 100% sin conexión</p>
+      </div>
+    </div>
+
+    <div class="lang-switch">
+      <button type="button" id="btn-es" class="lang-btn active">ES</button>
+      <button type="button" id="btn-en" class="lang-btn">EN</button>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <section class="panel form-panel no-print">
+
+      <div class="group">
+        <h2 data-i18n="issuer_section">Emisor</h2>
+        <label><span data-i18n="issuer_name">Nombre</span>
+          <input type="text" id="issuer-name" autocomplete="off" />
+        </label>
+        <label><span data-i18n="issuer_address">Dirección</span>
+          <input type="text" id="issuer-address" autocomplete="off" />
+        </label>
+        <label><span data-i18n="issuer_phone">Teléfono</span>
+          <input type="text" id="issuer-phone" autocomplete="off" />
+        </label>
+        <div class="logo-controls">
+          <label class="file-label"><span data-i18n="logo_upload">Subir logo (opcional)</span>
+            <input type="file" id="issuer-logo" accept="image/*" />
+          </label>
+          <button type="button" id="logo-remove" class="btn ghost" data-i18n="logo_remove">Quitar logo</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <h2 data-i18n="client_section">Cliente</h2>
+        <label><span data-i18n="client_name">Nombre</span>
+          <input type="text" id="client-name" autocomplete="off" />
+        </label>
+        <label><span data-i18n="client_address">Dirección</span>
+          <input type="text" id="client-address" autocomplete="off" />
+        </label>
+        <label><span data-i18n="client_phone">Teléfono</span>
+          <input type="text" id="client-phone" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="group">
+        <h2 data-i18n="receipt_section">Datos del recibo</h2>
+        <div class="row">
+          <label><span data-i18n="date">Fecha</span>
+            <input type="date" id="receipt-date" />
+          </label>
+          <label><span data-i18n="folio">Folio</span>
+            <input type="text" id="receipt-folio" autocomplete="off" />
+          </label>
+        </div>
+        <label><span data-i18n="currency">Moneda</span>
+          <select id="currency-select"></select>
+        </label>
+        <label id="custom-currency-wrap" class="hidden"><span data-i18n="custom_currency">Moneda personalizada</span>
+          <input type="text" id="currency-custom" data-i18n-placeholder="custom_currency_placeholder" placeholder="Escribe tu símbolo, ej: S/" autocomplete="off" />
+        </label>
+      </div>
+
+      <div class="group">
+        <h2 data-i18n="items_section">Conceptos</h2>
+        <div class="items" id="items"></div>
+        <button type="button" id="add-row" class="btn">+ <span data-i18n="add_row">Agregar fila</span></button>
+      </div>
+
+      <div class="group">
+        <h2 data-i18n="totals_section">Totales</h2>
+        <div class="row">
+          <label><span data-i18n="discount_type">Tipo de descuento</span>
+            <select id="discount-type">
+              <option value="amount" data-i18n="discount_amount">Monto</option>
+              <option value="percent" data-i18n="discount_percent">Porcentaje (%)</option>
+            </select>
+          </label>
+          <label><span data-i18n="discount">Descuento</span>
+            <input type="number" id="discount-value" min="0" step="0.01" value="0" />
+          </label>
+        </div>
+      </div>
+
+      <div class="group">
+        <h2 data-i18n="notes_section">Notas</h2>
+        <textarea id="notes" rows="3" data-i18n-placeholder="notes_placeholder" placeholder="Gracias por su preferencia"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="button" id="btn-print" class="btn primary" data-i18n="print">Imprimir / Guardar PDF</button>
+        <button type="button" id="btn-new" class="btn" data-i18n="new_receipt">Nuevo recibo</button>
+      </div>
+
+    </section>
+
+    <section class="panel preview-panel">
+      <div class="receipt" id="receipt">
+        <div class="receipt-head">
+          <div class="receipt-issuer">
+            <img id="receipt-logo" class="receipt-logo hidden" alt="Logo" />
+            <div class="receipt-issuer-data">
+              <div id="r-issuer-name" class="r-name"></div>
+              <div id="r-issuer-address" class="r-line"></div>
+              <div id="r-issuer-phone" class="r-line"></div>
+            </div>
+          </div>
+          <div class="receipt-meta">
+            <div id="r-receipt-word" class="r-badge">RECIBO</div>
+            <div class="r-meta-line"><span data-i18n="folio">Folio</span>: <span id="r-folio"></span></div>
+            <div class="r-meta-line"><span data-i18n="date">Fecha</span>: <span id="r-date"></span></div>
+          </div>
+        </div>
+
+        <div class="receipt-client">
+          <div class="r-label" data-i18n="client_section">Cliente</div>
+          <div id="r-client-name" class="r-name"></div>
+          <div id="r-client-address" class="r-line"></div>
+          <div id="r-client-phone" class="r-line"></div>
+        </div>
+
+        <table class="receipt-table">
+          <thead>
+            <tr>
+              <th class="col-qty" data-i18n="qty">Cantidad</th>
+              <th class="col-desc" data-i18n="description">Descripción</th>
+              <th class="col-price" data-i18n="unit_price">Precio Unit.</th>
+              <th class="col-amount" data-i18n="amount">Importe</th>
+            </tr>
+          </thead>
+          <tbody id="r-items"></tbody>
+        </table>
+
+        <div class="receipt-totals">
+          <div class="t-row"><span data-i18n="subtotal">Subtotal</span><span id="r-subtotal"></span></div>
+          <div class="t-row" id="r-discount-row"><span data-i18n="discount">Descuento</span><span id="r-discount"></span></div>
+          <div class="t-row total"><span data-i18n="total">Total</span><span id="r-total"></span></div>
+        </div>
+
+        <div class="receipt-notes" id="r-notes"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/currency.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.qbaswing.qbasrecibos",
+  "appName": "QBAS-Recibos",
+  "webDir": "src",
+  "server": {
+    "androidScheme": "https"
+  }
+}

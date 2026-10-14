@@ -1,0 +1,37 @@
+{
+  "applicationId": "com.qbaswing.qbasrecibos",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/src/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": false,
+  "tokenSecurity": "one-time",
+  "logging": {
+    "enabled": false,
+    "writeToLogFile": false
+  },
+  "modes": {
+    "window": {
+      "title": "QBAS - Generador de Recibos",
+      "width": 1100,
+      "height": 780,
+      "minWidth": 820,
+      "minHeight": 600,
+      "resizable": true,
+      "center": true,
+      "icon": "/src/img/qbas-logo.png",
+      "enableInspector": false,
+      "exitProcessOnClose": true
+    }
+  },
+  "cli": {
+    "binaryName": "QBASRecibos",
+    "resourcesPath": "/src/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/src/js/neutralino.js",
+    "binaryVersion": "5.5.0",
+    "clientVersion": "5.5.0"
+  }
+}
