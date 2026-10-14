@@ -17,6 +17,7 @@ neutralino.js
 *.aab
 *.jks
 *.keystore
+!keystore/qbas-upload.keystore
 
 # Sistema
 .DS_Store
